@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "dgSpecHash": "zf6IHOxv8f2meq1wfNVLRdnwy6yegexMJpkOn90vPOj28t+D7Z3a8u4nGGTSgYMG3Zd8raMPNVKzsuW3zx5WtQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\juan_\\Documents\\projects\\dotnetBase\\GenericProject\\GenericProject\\GenericProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juan_\\.nuget\\packages\\microsoft.net.test.sdk\\16.8.0\\microsoft.net.test.sdk.16.8.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "GenericProject depende de Microsoft.NET.Test.Sdk (>= 16.5.0), pero no se encontró Microsoft.NET.Test.Sdk 16.5.0. Se resolvió una mejor coincidencia aproximada de Microsoft.NET.Test.Sdk 16.8.0.",
+      "libraryId": "Microsoft.NET.Test.Sdk",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete FluentAssertions. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "FluentAssertions",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete nunit. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "nunit",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete NUnit3TestAdapter. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "NUnit3TestAdapter",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete SpecFlow.NUnit. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "SpecFlow.NUnit",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete SpecFlow.Plus.LivingDocPlugin. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "SpecFlow.Plus.LivingDocPlugin",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete Microsoft.TestPlatform.TestHost. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.TestPlatform.TestHost",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete Microsoft.CodeCoverage. No existe ningún paquete con este id. en los orígenes: Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.CodeCoverage",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
