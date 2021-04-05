@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace GenericProject.Providers
 {
-    class WebDriverProvider
+    public class WebDriverProvider
     {
+        public IWebDriver WebDriver {get;}
+
+        public WebDriverProvider()
+        {
+
+        }
     }
 }
