@@ -1,4 +1,8 @@
-﻿using System;
+﻿using GenericProject.Pages.Wikipedia;
+using GenericProject.Providers;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using System;
 using TechTalk.SpecFlow;
 
 namespace GenericProject.Steps
@@ -7,6 +11,19 @@ namespace GenericProject.Steps
     public class WikipediaSteps
     {
         private readonly ScenarioContext _scenarioContext;
+        private IWebDriver _webDriver;
+
+        [BeforeScenario]
+        public void SetUp()
+        {
+            _webDriver = WebDriverProvider.GetWebDriver(WebDriverProvider.Browser.Chrome);
+        }
+
+        [AfterScenario]
+        public void TearDown()
+        {
+            _webDriver.Quit();
+        }
 
         public WikipediaSteps(ScenarioContext scenarioContext)
         {
@@ -16,19 +33,21 @@ namespace GenericProject.Steps
         [Given(@"the browser is in the wikipedia home page")]
         public void TheBrowserIsInTheWikipediaHomePage()
         {
-            _scenarioContext.Pending();
+            _webDriver.Navigate().GoToUrl("https://www.wikipedia.org/");
         }
 
         [When(@"(.*) is searched")]
         public void IsSearched(string searchTerm)
         {
-            _scenarioContext.Pending();
+            WikiHomePage wikiHome = new WikiHomePage(_webDriver);
+            wikiHome.SearchATerm(searchTerm);
         }
 
         [Then(@"a (.*) result page is opened")]
-        public void AResultPageIsOpened()
+        public void AResultPageIsOpened(string pageTitle)
         {
-            _scenarioContext.Pending();
+            WikiResultPage wikiResult = new WikiResultPage(_webDriver);
+            Assert.AreEqual(wikiResult.GetPageTitle(), pageTitle);
         }
     }
 }

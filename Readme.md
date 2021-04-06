@@ -7,4 +7,4 @@ a test automation project.
 
 ## Nugget Packages
 + Selenium.WebDriver
-+ Selenium.Chrome.WebDriver
++ Selenium.WebDriver.Chrome
