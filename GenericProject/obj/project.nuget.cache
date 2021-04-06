@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dgSGWPrQLHtcVBmR0rwqfDBSDvl81KoQrm7ZFdenrrziM/NJHlcU8NZpX5c+TOnC8WyztWYHRoKHIWP4jlI4Lw==",
+  "dgSpecHash": "tNgucEkt6u9PxyA1/26EVyQhNgC0W5BsyxDXYZoHWmH1YK6g7EmS8PQ/GjpuwwoMmI5QDjVlM57RqvSwFca8Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\juan_\\Documents\\projects\\dotnetBase\\GenericProject\\GenericProject\\GenericProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juan_\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\juan_\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
+    "C:\\Users\\juan_\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\juan_\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\juan_\\.nuget\\packages\\gherkin\\6.0.0\\gherkin.6.0.0.nupkg.sha512",
     "C:\\Users\\juan_\\.nuget\\packages\\google.protobuf\\3.7.0\\google.protobuf.3.7.0.nupkg.sha512",

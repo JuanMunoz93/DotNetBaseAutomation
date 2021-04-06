@@ -8,3 +8,4 @@ a test automation project.
 ## Nugget Packages
 + Selenium.WebDriver
 + Selenium.WebDriver.Chrome
++ DotNetSeleniumExtras.WaitHelpers

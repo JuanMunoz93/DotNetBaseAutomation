@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GenericProject.Extensions;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace GenericProject.Pages.Wikipedia
 
         public void SearchATerm(string term)
         {
-            _searchInput.SendKeys(term);
-            _searchBtn.Click();
+            _searchInput.CustomSendKeys(term);
+            _searchBtn.CustomClick();
         }
     }
 }

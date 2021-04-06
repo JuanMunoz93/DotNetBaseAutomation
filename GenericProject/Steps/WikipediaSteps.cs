@@ -17,6 +17,7 @@ namespace GenericProject.Steps
         public void SetUp()
         {
             _webDriver = WebDriverProvider.GetWebDriver(WebDriverProvider.Browser.Chrome);
+            Extensions.WebElementExtensions.SetWebDriver(_webDriver);
         }
 
         [AfterScenario]
