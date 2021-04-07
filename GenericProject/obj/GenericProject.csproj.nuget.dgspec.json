@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[3.11.0, )"
             },
+            "ExtentReports": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[5.10.3, )"
@@ -55,6 +59,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.9, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",

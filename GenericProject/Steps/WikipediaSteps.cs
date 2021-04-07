@@ -16,8 +16,11 @@ namespace GenericProject.Steps
         [BeforeScenario]
         public void SetUp()
         {
+            ReportProvider reportProvider = new ReportProvider();
+            reportProvider.InitReporter();
             _webDriver = WebDriverProvider.GetWebDriver(WebDriverProvider.Browser.Chrome);
             Extensions.WebElementExtensions.SetWebDriver(_webDriver);
+
         }
 
         [AfterScenario]
