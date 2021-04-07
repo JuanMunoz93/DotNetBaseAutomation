@@ -1,0 +1,15 @@
+Info (2021-04-07 00:22:04.9400): Browser selected: Chrome
+Info (2021-04-07 00:22:06.3158): Text '.net' wrote on 'search input'
+Info (2021-04-07 00:22:07.4569): 'search button' clicked
+Info (2021-04-07 00:22:07.4868): Page title= '.net'
+Info (2021-04-07 00:22:07.4958): ---------------------Test finished---------------------
+
+Info (2021-04-07 00:22:07.4958): Execution status: Passed
+Info (2021-04-07 00:24:48.4392): ---------------------Test Name: SearchInWikipedia---------------------
+Info (2021-04-07 00:24:49.4533): Browser selected: Chrome
+Info (2021-04-07 00:24:50.8380): Text '.net' wrote on 'search input'
+Info (2021-04-07 00:24:52.1204): 'search button' clicked
+Info (2021-04-07 00:24:52.1347): Page title= '.net'
+Info (2021-04-07 00:24:52.1347): ---------------------Test finished---------------------
+
+Info (2021-04-07 00:24:52.1347): Execution status: Passed

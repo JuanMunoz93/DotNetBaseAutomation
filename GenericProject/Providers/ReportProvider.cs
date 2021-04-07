@@ -3,21 +3,21 @@ using AventStack.ExtentReports.Reporter;
 using GenericProject.Utils;
 using NLog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericProject.Providers
 {
-    public class ReportProvider
+    public static class ReportProvider
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetLogger("customLogger");
-        private ExtentReports _extentReports;
-        private ExtentTest _test { get; set; }
+        private static readonly Logger _logger = LogManager.GetLogger("customLogger");
+        private static ExtentReports _extentReports;
+        private static bool isInit = false;
+        private static ExtentTest _test { get; set; }
 
-        public void InitReporter()
+        public static void InitReporter()
         {
+            if (isInit) return;
+
+            
             string projectdirectory = GenericUtils.GetProjectDirectory();
             GenericUtils.CreateDirectory($"{projectdirectory}/Reports");
             ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter($"{projectdirectory}/Reports/Report.html");
@@ -25,14 +25,15 @@ namespace GenericProject.Providers
             _extentReports = new ExtentReports();
             _extentReports.AttachReporter(extentHtmlReporter);
             _extentReports.AddSystemInfo("Machine User Name", Environment.UserName);
+            isInit = true;
         }
 
-        public void GenerateHtmlReport(string status, string message)
+        public static void GenerateHtmlReport(string status, string message)
         {
-            Status logStatus
+            Status logStatus;
             switch (status)
             {
-                case "Pass":
+                case "Passed":
                     logStatus = Status.Pass;
                     break;
                 case "Failed":
@@ -51,28 +52,29 @@ namespace GenericProject.Providers
             _extentReports.Flush();
         }
 
-        public void CreateTest(string testName)
+        public static void CreateTest(string testName)
         {
             _test = _extentReports.CreateTest(testName);
+            LogTestStarted(testName);
         }
 
-        public void LogInfoInAllReporters(Status status,string message)
+        public static void LogInfoInAllReporters(Status status,string message)
         {
             _test.Log(status, message);      //log in the html report
             _logger.Info(message);           //log in the log file
         }
 
-        public void LogInfo(string message)
+        public static void LogInfo(string message)
         {
             _logger.Info(message);
         }
 
-        public void LogInHtmlReport(Status status, string message)
+        public static void LogInHtmlReport(Status status, string message)
         {
             _test.Log(status, message);
         }
 
-        public void LogNewExecutionStarted()
+        public static void LogNewExecutionStarted()
         {
             string line = "*****************";
             _logger.Info(line);
@@ -80,14 +82,14 @@ namespace GenericProject.Providers
             _logger.Info(line);
         }
 
-        public void LogTestStarted(string testName)
+        public static void LogTestStarted(string testName)
         {
             _logger.Info($"---------------------Test Name: {testName}---------------------");
         }
 
-        public void LogTestFinished()
+        public static void LogTestFinished()
         {
-            _logger.Info("---------------------Test finished---------------------\n");
+            _logger.Info("---------------------Test finished---------------------");
         }
     }
 }

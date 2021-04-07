@@ -1,9 +1,5 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GenericProject.Providers;
+using OpenQA.Selenium;
 
 namespace GenericProject.Pages.Wikipedia
 {
@@ -19,7 +15,9 @@ namespace GenericProject.Pages.Wikipedia
 
         public string GetPageTitle()
         {
-            return _titleLabel.Text;
+            string title = _titleLabel.Text;
+            ReportProvider.LogInfo($"Page title= '{title}'");
+            return title;
         }
     }
 }

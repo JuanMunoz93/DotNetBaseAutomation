@@ -1,10 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericProject.Providers
 {
@@ -21,7 +18,7 @@ namespace GenericProject.Providers
         public static IWebDriver GetWebDriver(Browser browser)
         {
             IWebDriver webDriver = GetDriver(browser);
-
+            ReportProvider.LogInfoInAllReporters(Status.Info, $"Browser selected: {browser}");
             return webDriver;
         }
 

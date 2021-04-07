@@ -1,17 +1,15 @@
-﻿using OpenQA.Selenium;
+﻿using GenericProject.Providers;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AventStack.ExtentReports;
 
 namespace GenericProject.Extensions
 {
     public static class WebElementExtensions
     {
         private static IWebDriver _webDriver;
-        private static int _waitTime=5;
+        private static int _waitTime = 5;
         private static WebDriverWait _wait;
 
         public static void SetWebDriver(IWebDriver webDriver)
@@ -24,11 +22,18 @@ namespace GenericProject.Extensions
         {
             _waitTime = timeSec;
             _wait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(_waitTime));
+            ReportProvider.LogInfo($"New Wait Time configured: {timeSec} seconds");
         }
 
         public static void CustomClick(this IWebElement element)
         {
             _wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element)).Click();
+        }
+
+        public static void CustomClick(this IWebElement element, string elementName)
+        {
+            element.CustomClick();
+            ReportProvider.LogInfo($"'{elementName}' clicked");
         }
 
         public static void CustomSendKeys(this IWebElement element, string text)
@@ -41,5 +46,11 @@ namespace GenericProject.Extensions
             }).SendKeys(text);
         }
 
+        public static void CustomSendKeys(this IWebElement element, string text, string elementName)
+        {
+            element.CustomSendKeys(text);
+
+            ReportProvider.LogInfo($"Text '{text}' wrote on '{elementName}'");
+        }
     }
 }

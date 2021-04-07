@@ -22,8 +22,8 @@ namespace GenericProject.Pages.Wikipedia
 
         public void SearchATerm(string term)
         {
-            _searchInput.CustomSendKeys(term);
-            _searchBtn.CustomClick();
+            _searchInput.CustomSendKeys(term, "search input");
+            _searchBtn.CustomClick("search button");
         }
     }
 }

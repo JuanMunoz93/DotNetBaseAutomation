@@ -13,19 +13,23 @@ namespace GenericProject.Steps
         private readonly ScenarioContext _scenarioContext;
         private IWebDriver _webDriver;
 
+        
         [BeforeScenario]
         public void SetUp()
         {
-            ReportProvider reportProvider = new ReportProvider();
-            reportProvider.InitReporter();
+            ReportProvider.InitReporter();
+            ReportProvider.CreateTest(TestContext.CurrentContext.Test.Name);
             _webDriver = WebDriverProvider.GetWebDriver(WebDriverProvider.Browser.Chrome);
             Extensions.WebElementExtensions.SetWebDriver(_webDriver);
-
         }
 
         [AfterScenario]
         public void TearDown()
         {
+            string testResultStatus = TestContext.CurrentContext.Result.Outcome.Status.ToString();
+            string resultMessage = TestContext.CurrentContext.Result.Message;
+            ReportProvider.LogTestFinished();
+            ReportProvider.GenerateHtmlReport(testResultStatus,resultMessage);
             _webDriver.Quit();
         }
 
