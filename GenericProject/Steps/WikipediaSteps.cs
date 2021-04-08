@@ -1,42 +1,15 @@
 ﻿using GenericProject.Pages.Wikipedia;
 using GenericProject.Providers;
+using GenericProject.Steps.BaseSteps;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
 using TechTalk.SpecFlow;
 
 namespace GenericProject.Steps
 {
     [Binding]
-    public class WikipediaSteps
+    public class WikipediaSteps: FrontEndBaseStep
     {
-        private readonly ScenarioContext _scenarioContext;
-        private IWebDriver _webDriver;
-
-        
-        [BeforeScenario]
-        public void SetUp()
-        {
-            ReportProvider.InitReporter();
-            ReportProvider.CreateTest(TestContext.CurrentContext.Test.Name);
-            _webDriver = WebDriverProvider.GetWebDriver(WebDriverProvider.Browser.Chrome);
-            Extensions.WebElementExtensions.SetWebDriver(_webDriver);
-        }
-
-        [AfterScenario]
-        public void TearDown()
-        {
-            string testResultStatus = TestContext.CurrentContext.Result.Outcome.Status.ToString();
-            string resultMessage = TestContext.CurrentContext.Result.Message;
-            ReportProvider.LogTestFinished();
-            ReportProvider.GenerateHtmlReport(testResultStatus,resultMessage);
-            _webDriver.Quit();
-        }
-
-        public WikipediaSteps(ScenarioContext scenarioContext)
-        {
-            _scenarioContext = scenarioContext;
-        }
 
         [Given(@"the browser is in the wikipedia home page")]
         public void TheBrowserIsInTheWikipediaHomePage()

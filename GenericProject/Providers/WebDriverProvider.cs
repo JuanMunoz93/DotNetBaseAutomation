@@ -7,7 +7,9 @@ namespace GenericProject.Providers
 {
     public static class WebDriverProvider
     {
-       
+        
+        public static IWebDriver WebDriver;
+
         public enum Browser
         {
             Chrome,
@@ -15,11 +17,11 @@ namespace GenericProject.Providers
             Edge
         }
 
-        public static IWebDriver GetWebDriver(Browser browser)
+        public static IWebDriver GenerateWebDriver(Browser browser)
         {
-            IWebDriver webDriver = GetDriver(browser);
+            WebDriver = GetDriver(browser);
             ReportProvider.LogInfoInAllReporters(Status.Info, $"Browser selected: {browser}");
-            return webDriver;
+            return WebDriver;
         }
 
         private static IWebDriver GetDriver(Browser browser)
@@ -27,7 +29,10 @@ namespace GenericProject.Providers
             switch (browser)
             {
                 case Browser.Chrome:
-                    return new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.AddArguments("--incognito");
+                    options.AddArguments("--start-maximized");
+                    return new ChromeDriver(options);
                 case Browser.FireFox:
                     throw new NotImplementedException("Web browser type not implemented");
                 case Browser.Edge:
