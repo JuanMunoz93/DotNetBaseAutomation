@@ -1,11 +1,6 @@
 ﻿using GenericProject.Providers;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace GenericProject.Steps.BaseSteps
@@ -14,7 +9,7 @@ namespace GenericProject.Steps.BaseSteps
     {
         protected IWebDriver _webDriver;
 
-        [BeforeScenario]
+        [BeforeScenario(Order = 0)]
         public void FrontEndBefore()
         {
             ReportProvider.InitReporter();
