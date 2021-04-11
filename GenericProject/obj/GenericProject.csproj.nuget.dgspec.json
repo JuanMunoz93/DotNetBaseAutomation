@@ -84,6 +84,10 @@
               "target": "Package",
               "version": "[3.7.10, )"
             },
+            "Tesseract": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
             "nunit": {
               "target": "Package",
               "version": "[3.13.0, )"

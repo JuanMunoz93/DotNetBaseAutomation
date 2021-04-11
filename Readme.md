@@ -17,8 +17,13 @@ The objective of this project is to save time on a new automation project, do no
 + NLog
 + ExtentReports
 
+## AI
++ Tesseract
+
 # Notes
-+ The NLog.config file need the "Copy if newer" or the "Copy always" value in the "Copy to Output Directory" property.
+The next files needs the "Copy if newer" or the "Copy always" value in the "Copy to Output Directory" property:
++ NLog.config
++ testdata/eng.traineddata
 
 # Contact
 + mail: juan_munozbe@outlook.com
