@@ -16,11 +16,15 @@
     <PackageReference Include="nunit" Version="3.13.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Tesseract" Version="4.1.1" />
     
   </ItemGroup>
 
   <ItemGroup>
     <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata\eng.traineddata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
