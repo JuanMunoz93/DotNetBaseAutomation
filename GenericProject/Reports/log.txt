@@ -732,3 +732,160 @@ Info (2021-04-11 21:02:38.5660): Browser selected: Chrome
 Info (2021-04-11 21:02:40.0594): Element 'tesseract test image' centered
 Info (2021-04-11 21:02:40.3970): Test failed: 
 'Could not find a part of the path 'C:\Users\juan_\Documents\projects\dotnetBase\GenericProject\GenericProject\Reports\screenshots\asd.bmp'.'
+Info (2021-04-11 21:27:12.0920): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:27:13.1424): Browser selected: Chrome
+Info (2021-04-11 21:27:14.7010): Element 'tesseract test image' centered
+Info (2021-04-11 21:27:15.0466): Directory created: C:\Users\juan_\Documents\projects\dotnetBase\GenericProject\GenericProject//Reports//SS
+Info (2021-04-11 21:27:52.2423): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:27:53.2764): Browser selected: Chrome
+Info (2021-04-11 21:27:54.7377): Element 'tesseract test image' centered
+Info (2021-04-11 21:28:27.5210): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:28:28.5685): Browser selected: Chrome
+Info (2021-04-11 21:28:30.0329): Element 'tesseract test image' centered
+Info (2021-04-11 21:29:17.8978): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:29:18.9248): Browser selected: Chrome
+Info (2021-04-11 21:29:20.4769): Element 'tesseract test image' centered
+Info (2021-04-11 21:29:37.1322): Test failed: 
+'Failed to load image 'C:\Users\juan_\Documents\projects\dotnetBase\GenericProject\GenericProject//Reports//SS//Tesseract_test'.'
+Info (2021-04-11 21:30:19.1968): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:30:20.2391): Browser selected: Chrome
+Info (2021-04-11 21:30:23.2266): Element 'tesseract test image' centered
+Info (2021-04-11 21:36:12.1639): ---------------------Test Name: SearchInWikipedia---------------------
+Info (2021-04-11 21:36:13.1816): Browser selected: Chrome
+Info (2021-04-11 21:36:14.5885): Text '.net' wrote on 'search input'
+Info (2021-04-11 21:36:15.7538): 'search button' clicked
+Info (2021-04-11 21:36:15.7854): Page title= '.net'
+Info (2021-04-11 21:36:15.7854): Comparing if two elements are equal. 
+Expected value: '.net' 
+Actual value: '.net'
+Info (2021-04-11 21:36:15.7854): Execution status: Inconclusive
+Info (2021-04-11 21:36:17.9478): ---------------------Test finished---------------------
+Info (2021-04-11 21:36:21.9401): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:36:22.9670): Browser selected: Chrome
+Info (2021-04-11 21:36:24.4836): Element 'tesseract test image' centered
+Info (2021-04-11 21:36:25.7735): Verifying if the actual value contains the expected one: 
+Expected value: ' 
+
+Nasdaq & AMEX
+
+Stocks in bold rose or fell 5% or more
+
+PTY Track your investments with our continuously
+Lie. 8”. updated stocks. Visit us on the web at
+ket
+money.usatoday.com
+
+S2-week St-week
+Hish Low Stock Last Chonge | High Low Stock Last Change
+
+457) 32.50. Biomet 36 =
+entre PA seeded: 2.76 1.20 Biomira 1.46
+A 9.07 5.13 BioScrip 8.05 +
+— 68.88 50.65 Biosite 50.05 —
+35 20 Aghen” vase <yay | 21225 131.03 BiotechT
+1351 850 1.40
+
+ 
+
+ 
+
+ 
+
+aE
+
+me iis sen Seth | tam for Bieta vee
+52.73 13.86 BluCoot 41.29
+44.35 24.15 BlueNile 40.30
+26.45 19.91 BobEvn 22.99
+15.94 6.12 Bodisenn 15.45
+621 1.56 Bookham 5.94
+11.80 4.99 Borland 6.68
+31,90 21.10 BostPry 31.18
+18.62 10.01 BtminT 1:53
+
+ 
+
+x
+&
+5
+:
+o
+g
+3
+5
+3
+
+45.72 26.65 BrightHrz s 38.90 —0.80
+
+ 
+
+This text from USA Today was scanned at 200 dots per inch (dpi). & bit grayscale on a Primax Colorado 600p scanner and saved as a jpeg file at 75% quality using MGI PhotoSuite 8.06 (1998). The image
+' 
+Actual value: 'Stocks in bold rose or fell 5% or more'
+Info (2021-04-11 21:36:25.8032): Test failed: 
+'  The expected text was not found in the image
+  Expected: True
+  But was:  False
+'
+Info (2021-04-11 21:38:03.6135): ---------------------Test Name: TesseractImplementation---------------------
+Info (2021-04-11 21:38:04.6303): Browser selected: Chrome
+Info (2021-04-11 21:38:06.1386): Element 'tesseract test image' centered
+Info (2021-04-11 21:38:07.4278): Verifying if the actual value contains the expected one: 
+Expected value: 'Stocks in bold rose or fell 5% or more' 
+Actual value: ' 
+
+Nasdaq & AMEX
+
+Stocks in bold rose or fell 5% or more
+
+PTY Track your investments with our continuously
+Lie. 8”. updated stocks. Visit us on the web at
+ket
+money.usatoday.com
+
+S2-week St-week
+Hish Low Stock Last Chonge | High Low Stock Last Change
+
+457) 32.50. Biomet 36 =
+entre PA seeded: 2.76 1.20 Biomira 1.46
+A 9.07 5.13 BioScrip 8.05 +
+— 68.88 50.65 Biosite 50.05 —
+35 20 Aghen” vase <yay | 21225 131.03 BiotechT
+1351 850 1.40
+
+ 
+
+ 
+
+ 
+
+aE
+
+me iis sen Seth | tam for Bieta vee
+52.73 13.86 BluCoot 41.29
+44.35 24.15 BlueNile 40.30
+26.45 19.91 BobEvn 22.99
+15.94 6.12 Bodisenn 15.45
+621 1.56 Bookham 5.94
+11.80 4.99 Borland 6.68
+31,90 21.10 BostPry 31.18
+18.62 10.01 BtminT 1:53
+
+ 
+
+x
+&
+5
+:
+o
+g
+3
+5
+3
+
+45.72 26.65 BrightHrz s 38.90 —0.80
+
+ 
+
+This text from USA Today was scanned at 200 dots per inch (dpi). & bit grayscale on a Primax Colorado 600p scanner and saved as a jpeg file at 75% quality using MGI PhotoSuite 8.06 (1998). The image
+'

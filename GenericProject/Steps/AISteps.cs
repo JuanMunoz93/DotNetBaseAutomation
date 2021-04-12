@@ -28,9 +28,8 @@ namespace GenericProject.Steps
         [Then(@"the text ""(.*)"" is found")]
         public void ThenTheTextIsFound(string expectedTest)
         {
-            ScenarioContext.Current.Pending();
+            _AIDefinitions.VerifyTextInImage(expectedTest);
+            TearDown();
         }
-
-
     }
 }

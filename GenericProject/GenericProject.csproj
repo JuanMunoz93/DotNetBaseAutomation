@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <Folder Include="Hooks\" />
+    <Folder Include="Reports\SS\" />
   </ItemGroup>
 
 </Project>

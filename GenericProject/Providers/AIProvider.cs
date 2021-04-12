@@ -7,17 +7,11 @@ using Tesseract;
 
 namespace GenericProject.Providers
 {
-    public class AIProvider
+    public static class AIProvider
     {
-        private readonly TesseractEngine _tesseractEngine;
-        private bool _disposed = false;
+        private static readonly TesseractEngine _tesseractEngine = new TesseractEngine(@"./tessdata", "eng", EngineMode.Default);
 
-        public AIProvider()
-        {
-            _tesseractEngine = new TesseractEngine(@"./tessdata", "eng", EngineMode.Default);
-        }
-
-        public string GetTextFromImage(string imagePath)
+        public static string GetTextFromImage(string imagePath)
         {
             string text;
 
