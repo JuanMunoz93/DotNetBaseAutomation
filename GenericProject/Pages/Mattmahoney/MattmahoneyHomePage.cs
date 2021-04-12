@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GenericProject.Extensions;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace GenericProject.Pages.Mattmahoney
 
         public void CenterTestImage()
         {
-
+            _testImage.CenterElement("tesseract test image");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using GenericProject.Steps;
+using NUnit.Framework;
 
 namespace GenericProject.Providers
 {
@@ -37,6 +38,7 @@ namespace GenericProject.Providers
             ReportProvider.LogInfoInAllReporters(AventStack.ExtentReports.Status.Fail, 
                 $"Test failed: \n'{failMsg}'");
             Assert.Fail(failMsg);
+            BaseSteps.TearDown();
         }
 
 

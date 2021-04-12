@@ -16,8 +16,6 @@ namespace GenericProject.Providers
         public static void InitReporter()
         {
             if (isInit) return;
-
-            
             string projectdirectory = GenericUtils.GetProjectDirectory();
             GenericUtils.CreateDirectory($"{projectdirectory}/Reports");
             ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter($"{projectdirectory}/Reports/Report.html");

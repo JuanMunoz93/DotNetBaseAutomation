@@ -1,7 +1,5 @@
 ﻿using GenericProject.Definitions;
-using GenericProject.Pages.Wikipedia;
 using GenericProject.Providers;
-using GenericProject.Steps.BaseSteps;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -9,19 +7,15 @@ using TechTalk.SpecFlow;
 namespace GenericProject.Steps
 {
     [Binding]
-    public class WikipediaSteps: FrontEndBaseStep
+    public sealed class WikipediaSteps: BaseSteps
     {
         private WikipediaDefinitions _wikipediaDefinitions;
-        
-        [BeforeScenario(Order = 1)]
-        public void  Before()
-        {
-            _wikipediaDefinitions = new WikipediaDefinitions(_webDriver);
-        }
 
         [Given(@"the browser is in the wikipedia home page")]
         public void TheBrowserIsInTheWikipediaHomePage()
         {
+            SetUp();
+            _wikipediaDefinitions = new WikipediaDefinitions(_webDriver);
             _wikipediaDefinitions.OpenWikipediaHomePage();
         }
 
@@ -36,6 +30,7 @@ namespace GenericProject.Steps
         public void AResultPageIsOpened(string pageTitle)
         {
             _wikipediaDefinitions.VerifyWikipediaResultTitle(pageTitle);
+            TearDown();
         }
     }
 }

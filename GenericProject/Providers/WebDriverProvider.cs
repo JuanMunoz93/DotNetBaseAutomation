@@ -1,4 +1,5 @@
 ﻿using AventStack.ExtentReports;
+using GenericProject.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -7,7 +8,6 @@ namespace GenericProject.Providers
 {
     public static class WebDriverProvider
     {
-        
         public static IWebDriver WebDriver;
 
         public enum Browser
@@ -21,6 +21,7 @@ namespace GenericProject.Providers
         {
             WebDriver = GetDriver(browser);
             ReportProvider.LogInfoInAllReporters(Status.Info, $"Browser selected: {browser}");
+            WebElementExtensions.SetWebDriver(WebDriver);
             return WebDriver;
         }
 
@@ -40,6 +41,11 @@ namespace GenericProject.Providers
                 default:
                     throw new NotImplementedException("Web browser type not implemented");
             }
+        }
+
+        public static void QuitWebDriver()
+        {
+            WebDriver.Quit();
         }
     }
 }

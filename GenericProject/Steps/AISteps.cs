@@ -1,26 +1,28 @@
-﻿using GenericProject.Steps.BaseSteps;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using GenericProject.Definitions;
+using GenericProject.Providers;
+using NUnit.Framework;
+using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace GenericProject.Steps
 {
     [Binding]
-    public sealed class AISteps : FrontEndBaseStep
+    public sealed class AISteps: BaseSteps 
     {
+        private AIDefinitions _AIDefinitions;
 
         [Given(@"the browser is in an OCR Test Images Page")]
         public void GivenTheBrowserIsInAnOCRTestImagesPage()
         {
-            ScenarioContext.Current.Pending();
+            SetUp();
+            _AIDefinitions = new AIDefinitions(_webDriver);
+            _AIDefinitions.OpenTesseractTestPage();
         }
 
         [When(@"the page is analized with tesseract")]
         public void WhenThePageIsAnalizedWithTesseract()
         {
-            ScenarioContext.Current.Pending();
+            _AIDefinitions.GetPageText();
         }
 
         [Then(@"the text ""(.*)"" is found")]
