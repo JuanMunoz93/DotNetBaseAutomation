@@ -1,7 +1,4 @@
 ﻿using GenericProject.Definitions;
-using GenericProject.Providers;
-using NUnit.Framework;
-using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace GenericProject.Steps
@@ -11,7 +8,7 @@ namespace GenericProject.Steps
     {
         private AIDefinitions _AIDefinitions;
 
-        [Given(@"the browser is in an OCR Test Images Page")]
+        [Given(@"the browser is opened in the OCR Test Images Page")]
         public void GivenTheBrowserIsInAnOCRTestImagesPage()
         {
             SetUp();
@@ -29,6 +26,27 @@ namespace GenericProject.Steps
         public void ThenTheTextIsFound(string expectedTest)
         {
             _AIDefinitions.VerifyTextInImage(expectedTest);
+            TearDown();
+        }
+
+        [Given(@"the browser is opened in the Google Home Page")]
+        public void GivenTheBrowserIsInTheGoogleHomePage()
+        {
+            SetUp();
+            _AIDefinitions = new AIDefinitions(_webDriver);
+            _AIDefinitions.OpenGoogleHomePage();
+        }
+
+        [When(@"""(.*)"" is typed in the search bar using sikuli")]
+        public void IsTypedInTheSearchBarUsingSikuli(string searchTerm)
+        {
+            _AIDefinitions.WriteInGoogleSearchBar(searchTerm);
+        }
+
+        [Then(@"in the search bar is visible the text ""(.*)""")]
+        public void InTheSearchBarIsVisibleTheText(string expectedTest)
+        {
+            _AIDefinitions.VerifyTextInSearchBar(expectedTest);
             TearDown();
         }
     }

@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[89.0.4389.2300, )"
             },
+            "SikuliSharp": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
             "SpecFlow.NUnit": {
               "target": "Package",
               "version": "[3.7.13, )"
