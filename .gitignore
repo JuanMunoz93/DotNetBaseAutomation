@@ -4,9 +4,11 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Report folder
-
-Reports/
-
+GenericProject/Reports/*
+Reports/*
+*.bmp
+ GenericProject/Reports/
+  GenericProject/Reports/*
 # User-specific files
 *.rsuser
 *.suo

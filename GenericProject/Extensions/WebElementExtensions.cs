@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using AventStack.ExtentReports;
 
 namespace GenericProject.Extensions
 {
@@ -51,6 +50,17 @@ namespace GenericProject.Extensions
             element.CustomSendKeys(text);
 
             ReportProvider.LogInfo($"Text '{text}' wrote on '{elementName}'");
+        }
+
+        public static void CenterElement(this IWebElement element)
+        {
+            ((IJavaScriptExecutor)_webDriver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
+        }
+
+        public static void CenterElement(this IWebElement element, string elementName)
+        {
+            element.CenterElement();
+            ReportProvider.LogInfo($"Element '{elementName}' centered");
         }
     }
 }

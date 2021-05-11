@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using GenericProject.Steps;
+using NUnit.Framework;
+using System;
 
 namespace GenericProject.Providers
 {
@@ -32,11 +34,25 @@ namespace GenericProject.Providers
             Assert.IsFalse(actualValue, assertionMsg);
         }
 
+        internal static void Contains(string expectedValue, string actualValue, string assertionMsg)
+        {
+            ReportProvider.LogInfoInAllReporters(AventStack.ExtentReports.Status.Info,
+                $"Verifying if the actual value contains the expected one: \nExpected value: '{expectedValue}' \nActual value: '{actualValue}'");
+            Assert.IsTrue(actualValue.Contains(expectedValue), assertionMsg);
+        }
+        internal static void NotContains(string expectedValue, string actualValue, string assertionMsg)
+        {
+            ReportProvider.LogInfoInAllReporters(AventStack.ExtentReports.Status.Info,
+                $"Verifying if the actual value not contains the expected one: \nExpected value: '{expectedValue}' \nActual value: '{actualValue}'");
+            Assert.IsFalse(actualValue.Contains(expectedValue), assertionMsg);
+        }
+
         public static void FailTest(string failMsg)
         {
             ReportProvider.LogInfoInAllReporters(AventStack.ExtentReports.Status.Fail, 
                 $"Test failed: \n'{failMsg}'");
             Assert.Fail(failMsg);
+            BaseSteps.TearDown();
         }
 
 

@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[89.0.4389.2300, )"
             },
+            "SikuliSharp": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
             "SpecFlow.NUnit": {
               "target": "Package",
               "version": "[3.7.13, )"
@@ -83,6 +87,10 @@
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",
               "version": "[3.7.10, )"
+            },
+            "Tesseract": {
+              "target": "Package",
+              "version": "[4.1.1, )"
             },
             "nunit": {
               "target": "Package",
